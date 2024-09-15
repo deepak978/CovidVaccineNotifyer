@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.cowin.vaccine.notifier.MainActivity">
+
+    <EditText
+        android:id="@+id/pincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter Pincode" />
+
+    <EditText
+        android:id="@+id/age_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Age Group (18/45)" />
+
+    <EditText
+        android:id="@+id/dose_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="dose1 / dose2 / any" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vaccine_type">
+
+        <RadioButton
+            android:id="@+id/radioAnyVaccine"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="  Any Vaccine"
+            android:layout_marginTop="8dp"
+            android:checked="false"/>
+
+        <RadioButton
+            android:id="@+id/radioCovishield"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="  Covishield"
+            android:layout_marginTop="8dp"
+            android:checked="false"/>
+
+        <RadioButton
+            android:id="@+id/radioCovaxin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   Covaxin"
+            android:layout_marginTop="8dp"
+            android:checked="false"/>
+
+        <RadioButton
+            android:id="@+id/radioSputnikV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   Sputnik V"
+            android:layout_marginTop="8dp"
+            android:checked="false"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:enabled="true"
+        android:onClick="submitButtonHandler"
+        android:text="Submit" />
+
+
+
+    <TextView
+        android:id="@+id/text_view_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Note:- Keep this app running in Background.\nMake sure your battry saver setting does not close this app.\nGo and Chill, Alarm will be played when Your Vaccine is available.\n then you can go and book your slot @ cowin.gov.in :)" />
+
+</LinearLayout>
